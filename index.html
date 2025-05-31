@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; }
+        #response { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Interação com a API de Estacionamento</h1>
+
+    <h2>Vagas Disponíveis</h2>
+    <button onclick="getAvailableSpots()">Consultar Vagas</button>
+    <div id="availableSpots"></div>
+
+    <h2>Entrada de Veículo</h2>
+    <label for="plateInput">Placa:</label>
+    <input type="text" id="plateInput" placeholder="Ex: ABC1234">
+    <label for="vehicleTypeInput">Tipo de Veículo:</label>
+    <select id="vehicleTypeInput">
+        <option value="CAR">Carro</option>
+        <option value="MOTORCYCLE">Moto</option>
+    </select>
+    <button onclick="enterVehicle()">Registrar Entrada</button>
+
+    <h2>Saída de Veículo</h2>
+    <label for="exitPlateInput">Placa para Saída:</label>
+    <input type="text" id="exitPlateInput" placeholder="Ex: ABC1234">
+    <button onclick="exitVehicle()">Registrar Saída</button>
+
+    <h2>Histórico de Tickets (Exemplo)</h2>
+    <button onclick="getAllTickets()">Consultar Todos os Tickets</button>
+    <div id="allTickets"></div>
+
+    <h2>Resposta da API:</h2>
+    <pre id="response"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
